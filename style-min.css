@@ -1,0 +1,318 @@
+
+
+:root {
+    --main-color: #1787e0;
+    --main-color-alt: #1787e0;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #2c3e50;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+  /* start services*/
+
+
+  .services h2{
+    text-align: center;
+    margin: 30px 0px;
+  }
+
+  .services .container{
+    display: flex;
+    padding: 0px 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .services .container .card{
+
+    margin-right:  20px;
+    box-shadow: 3px 3px 6px 6px #ccc ;
+    padding: 10px;
+    width: 16em;
+    text-align: center;
+    margin-bottom: 40px;
+    transition:all 2s ease  ;
+
+  }
+
+  .services .card h3{
+    color: crimson;
+  }
+
+  .services .card p{
+    font-size: 14px;
+    font-weight: 100 !important;
+    font-weight: inherit;
+  }
+
+  .services .card  div {
+    color: #2c3e50;
+    font-size: 40px;
+  }
+
+.services .card img{
+    width: 80px;
+    height: 80px;
+}
+
+.services .card::before {
+    content: "";
+
+    transform: translateX(-50%);
+    height: 3px;
+    top: -3px;
+    background-color: var(--main-color);
+    position: absolute;
+    width: 0;
+    transition: var(--main-transition);
+  }
+  .services .card:hover {
+    transform: translateY(-5px);
+  }
+  .services .card:hover::before {
+    width: 100%;
+  }
+
+  @media screen and (max-width:740px) {
+
+    .services h2{
+      margin: 0px !important;
+    }
+    .services{
+      padding: 0px !important;
+      width: 100% !important;
+    }
+    .services .container{
+      width: 100%;
+      padding: 0px !important;
+      margin: 0px !important;
+    }
+
+    .container .card{
+      width: fit-content !important;
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+      padding: 0px !important;
+      box-shadow: none !important;
+      font-weight: inherit;
+      border: none;
+    }
+
+    .services .card img{
+      width: 50px;
+    }
+
+    .services .card:hover {
+      transform: translateY(0px);
+    }
+
+  }
+
+
+
+
+
+
+  /* End services */
+
+
+
+
+
+/* Start protofile  */
+
+
+.protofil {
+    padding-top:10px;
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+  }
+
+  .protofil .main-title {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px !important;
+  }
+
+  .protofil .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+  }
+
+  .protofil .card {
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform var(--main-transition), box-shadow var(--main-transition);
+
+    }
+
+  .protofil .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+  }
+
+  .protofil .card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+  }
+
+  .protofil .card .content {
+    padding: 20px;
+  }
+
+  .protofil .card .content h3 {
+    margin: 0;
+  }
+
+  .protofil .card .content p {
+    margin: 10px 0 0;
+    line-height: 1.5;
+    color: #777;
+  }
+
+  .protofil .card .info {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .protofil .card .info a {
+    color: var(--main-color);
+    font-weight: bold;
+  }
+  .protofil .card .info i {
+    color: var(--main-color);
+  }
+
+  .protofil .card:hover .info i {
+    animation: moving-arrow 1s linear reverse infinite;
+  }
+
+
+
+  @media screen and (max-width:740px) {
+
+    .protofil .container{
+      width: 100%;
+      padding: 0px !important;
+      margin: 0px !important;
+
+    }
+
+    .protofil .container .card {
+      width: 100%;
+      padding: 0px !important;
+      margin: 0px !important;
+    }
+
+    .protofil .card img{
+      width: 100% !important;
+      padding: 0px !important;
+      margin: 0px !important;
+      background-size: cover;
+    }
+
+  }
+
+
+
+  /* End profile */
+
+/* concat  */
+.concat{
+	display: flex;
+  flex-wrap: nowrap;
+}
+
+ @media  screen  and  (max-width: 600px) {
+
+    .concat {
+        max-width: 100%;
+       flex-wrap: wrap;
+       margin: 0px;
+       padding-left: 0px;
+       padding-right:0px ;
+      }
+
+    }
+
+    .container {
+      width: 100%;
+	  margin: 20px 20px;
+      padding: 10px;
+      box-sizing: border-box;
+
+
+    }
+
+	.container .item{
+		display: flex;
+		align-items: center;
+		margin-top: 50px;
+		flex-wrap: wrap;
+	}
+
+    .form-group {
+      margin-bottom: 20px;
+
+
+	}
+
+  .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input, textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+
+    .concat button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color:  #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .concat  button:hover {
+      background-color: #45a049;
+    }
+
+
+
+/* animations  */
+
+@keyframes moving-arrow {
+    100% {
+      transform: translateX(-10px);
+    }
+  }
